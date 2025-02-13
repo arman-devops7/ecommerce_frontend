@@ -1,37 +1,25 @@
 .horizontal-list {
   display: flex;
-  /* Make the list flex container */
-  flex-direction: row;
-  /* Align items horizontally */
   align-items: center;
-  /* Vertically center items */
-  // padding: 0;
-  /* Remove default padding */
-  // margin: 0;
-  /* Remove default margin */
+  gap: 1rem;
 }
 
 .horizontal-item {
   --border-width: 0;
-  /* Remove border */
   --border-style: none;
-  /* Ensure no border style */
-  // --inner-border-width: 0;
-  /* Remove inner border (if any) */
-  // --min-height: auto;
-  /* Remove default min-height */
-  --padding: 10px 10px !important;
+  --padding: 10px !important;
   --inner-padding: 20px !important;
   --background: transparent;
-  /* Remove background */
   white-space: nowrap;
-  /* Prevent text wrapping */
 }
 
 .menu-items-col {
   display: flex;
   justify-content: center;
-  /* Center the menu items horizontally */
+}
+
+ion-menu {
+  --width: 250px;
 }
 
 /* Responsive Styles */
@@ -55,18 +43,12 @@
   }
 }
 
-/* Menu Styling */
-ion-menu {
-  --width: 250px;
-}
-
-.horizontal-list {
-  display: flex;
-  gap: 1rem;
-}
-
 /* Mobile Menu Button Styling */
 ion-menu-button {
   --color: #000;
   font-size: 1.5rem;
+}
+
+.home-title {
+  cursor: pointer;
 }

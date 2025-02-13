@@ -1,0 +1,19 @@
+<ion-button
+  [type]="type"
+  [color]="color"
+  [expand]="expand !== 'default' ? expand : undefined"
+  [shape]="shape !== 'default' ? shape : undefined"
+  [routerLink]="routerLink"
+  [disabled]="disabled"
+  [class]="customClass"
+  [fill]="fill"
+>
+  @if(icon){
+  <ion-icon
+    [name]="icon"
+    slot="start"
+  >
+  </ion-icon>
+  }
+  {{ text }}
+</ion-button>
