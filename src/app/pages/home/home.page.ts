@@ -8,7 +8,7 @@ import { IonContent, IonHeader, IonTitle, IonToolbar, IonList, IonItem } from '@
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonItem, IonList, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonItem, IonList, IonContent, CommonModule, FormsModule]
 })
 export class HomePage implements OnInit {
 

@@ -1,21 +1,72 @@
 .horizontal-list {
-    display: flex; /* Make the list flex container */
-    flex-direction: row; /* Align items horizontally */
-    align-items: center; /* Vertically center items */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+  display: flex;
+  /* Make the list flex container */
+  flex-direction: row;
+  /* Align items horizontally */
+  align-items: center;
+  /* Vertically center items */
+  // padding: 0;
+  /* Remove default padding */
+  // margin: 0;
+  /* Remove default margin */
+}
+
+.horizontal-item {
+  --border-width: 0;
+  /* Remove border */
+  --border-style: none;
+  /* Ensure no border style */
+  // --inner-border-width: 0;
+  /* Remove inner border (if any) */
+  // --min-height: auto;
+  /* Remove default min-height */
+  --padding: 10px 10px !important;
+  --inner-padding: 20px !important;
+  --background: transparent;
+  /* Remove background */
+  white-space: nowrap;
+  /* Prevent text wrapping */
+}
+
+.menu-items-col {
+  display: flex;
+  justify-content: center;
+  /* Center the menu items horizontally */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-button-col {
+    display: block !important;
   }
-  
-  .horizontal-item {
-    --border-width: 0; /* Remove bottom border */
-    --padding-start: 0.5rem; /* Add some spacing between items */
-    --padding-end: 0.5rem;
-    --inner-padding-end: 0;
-    --background: transparent; /* Remove background */
-    --min-height: auto; /* Remove default min-height */
-    white-space: nowrap; /* Prevent text wrapping */
+
+  .menu-items-col {
+    display: none !important;
   }
-  
-  .horizontal-item:hover {
-    --background: rgba(0, 0, 0, 0.1); /* Optional hover effect */
+}
+
+@media (min-width: 769px) {
+  .menu-button-col {
+    display: none !important;
   }
+
+  .menu-items-col {
+    display: flex !important;
+  }
+}
+
+/* Menu Styling */
+ion-menu {
+  --width: 250px;
+}
+
+.horizontal-list {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Mobile Menu Button Styling */
+ion-menu-button {
+  --color: #000;
+  font-size: 1.5rem;
+}

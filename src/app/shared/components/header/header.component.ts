@@ -23,8 +23,16 @@ export class HeaderComponent implements OnInit {
       url: '/',
     },
     {
+      title: 'products',
+      url: '/products',
+    },
+    {
       title: 'about',
       url: '/about',
+    },
+    {
+      title: 'contact',
+      url: '/contact',
     },
   ];
 
