@@ -1,5 +1,3 @@
-import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { Component, OnInit } from '@angular/core';
 import { IonSearchbar } from "@ionic/angular/standalone";
 
@@ -7,7 +5,7 @@ import { IonSearchbar } from "@ionic/angular/standalone";
   selector: 'searchbar',
   templateUrl: './searchbar.component.html',
   styleUrls: ['./searchbar.component.scss'],
-  imports: [CommonModule, IonicModule],
+  imports: [IonSearchbar],
   standalone: true
 })
 export class SearchbarComponent implements OnInit {

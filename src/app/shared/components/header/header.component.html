@@ -1,8 +1,6 @@
-<ion-menu
-  menuId="main-menu"
-  contentId="main-content"
->
-  <ion-header inert>
+<ion-menu menuId="main-menu"
+  contentId="main-content">
+  <ion-header>
     <ion-toolbar>
       <ion-title>Menu</ion-title>
     </ion-toolbar>
@@ -11,10 +9,8 @@
     <ion-list>
       @for (item of menuItems; track $index) {
       <ion-menu-toggle auto-hide="true">
-        <ion-item
-          [routerLink]="item.url"
-          [detail]="false"
-        >
+        <ion-item [routerLink]="item.url"
+          [detail]="false">
           {{ item.title }}
         </ion-item>
       </ion-menu-toggle>
@@ -27,49 +23,35 @@
 <ion-header id="main-content">
   <ion-toolbar>
     <ion-grid class="ion-no-padding">
-      <ion-row
-        class="ion-align-items-center"
-        style="min-height: 56px;"
-      >
+      <ion-row class="ion-align-items-center"
+        style="min-height: 56px;">
         <!-- Mobile Menu Button -->
-        <ion-col
-          size="2"
-          class="menu-button-col ion-text-center"
-        >
+        <ion-col size="2"
+          class="menu-button-col ion-text-center">
           <ion-menu-button menu="main-menu"></ion-menu-button>
         </ion-col>
 
         <!-- App Title -->
-        <ion-col
-          size="3"
-          class="ion-hide-md-down"
-        >
-          <ion-title
-            class="ion-text-center home-title"
-            [routerLink]="''"
-          >Ecommerce App</ion-title>
+        <ion-col size="3"
+          class="ion-hide-md-down">
+          <ion-title class="ion-text-center home-title"
+            [routerLink]="''">Ecommerce App</ion-title>
         </ion-col>
 
         <!-- Searchbar -->
-        <ion-col
-          size="4"
-          class="ion-hide-md-down"
-        >
+        <ion-col size="4"
+          class="ion-hide-md-down">
           <searchbar></searchbar>
         </ion-col>
 
         <!-- Desktop Menu Items -->
-        <ion-col
-          size="3"
-          class="menu-items-col ion-hide-md-down"
-        >
+        <ion-col size="3"
+          class="menu-items-col ion-hide-md-down">
           <ion-list class="horizontal-list">
             @for (item of menuItems; track $index) {
-            <ion-item
-              [routerLink]="item.url"
+            <ion-item [routerLink]="item.url"
               [detail]="false"
-              class="horizontal-item"
-            >
+              class="horizontal-item">
               {{ item.title }}
             </ion-item>
             }
@@ -77,19 +59,13 @@
         </ion-col>
 
         <!-- Action Buttons -->
-        <ion-col
-          size="4"
+        <ion-col size="4"
           size-md="2"
-          class="ion-text-center"
-        >
-          <ion-button
-            fill="clear"
-            class="ion-hide-md-down"
-          >Cart</ion-button>
-          <app-button
-            [text]="'login'"
-            class="ion-hide-md-down"
-          ></app-button>
+          class="ion-text-center">
+          <ion-button fill="clear"
+            class="ion-hide-md-down">Cart</ion-button>
+          <app-button [text]="'login'"
+            class="ion-hide-md-down"></app-button>
         </ion-col>
       </ion-row>
     </ion-grid>

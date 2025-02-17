@@ -1,20 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { IonContent, IonItem, IonList } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.page.html',
   styleUrls: ['./products.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonList, IonItem, IonContent, FormsModule]
 })
 export class ProductsPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    console.log("NgOnInit -- Products Page initialized");
+
+  }
+
+  ngOnDestroy(): void {
+    console.log("NgOnDestroy -- Products Page destroyed");
+
   }
 
 }
